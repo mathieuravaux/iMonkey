@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E3F2B55134BFE4B00AB7D2A /* os_Darwin.s in Sources */ = {isa = PBXBuildFile; fileRef = 4E3F2B52134BFE4B00AB7D2A /* os_Darwin.s */; };
+		4E3F2B57134C047A00AB7D2A /* uxproces.c in Sources */ = {isa = PBXBuildFile; fileRef = 4E3F2B56134C047A00AB7D2A /* uxproces.c */; };
 		AA747D9F0F9514B9006C5449 /* iMonkey_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* iMonkey_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 		D9B75509124BEDE300497E76 /* js-config.h in Headers */ = {isa = PBXBuildFile; fileRef = D9B7549C124BEDE200497E76 /* js-config.h */; };
@@ -223,6 +225,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E3F2B52134BFE4B00AB7D2A /* os_Darwin.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = os_Darwin.s; path = src/nsprpub/pr/src/md/unix/os_Darwin.s; sourceTree = "<group>"; };
+		4E3F2B56134C047A00AB7D2A /* uxproces.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = uxproces.c; path = src/nsprpub/pr/src/md/unix/uxproces.c; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* iMonkey_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iMonkey_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libiMonkey.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libiMonkey.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -712,6 +716,8 @@
 		D9B7567C124BF96100497E76 /* md */ = {
 			isa = PBXGroup;
 			children = (
+				4E3F2B56134C047A00AB7D2A /* uxproces.c */,
+				4E3F2B52134BFE4B00AB7D2A /* os_Darwin.s */,
 				D9B75C1D124C106200497E76 /* darwin.c */,
 				D9B75BEF124C0F8D00497E76 /* unix_errors.c */,
 				D9B75BF0124C0F8D00497E76 /* unix.c */,
@@ -1000,6 +1006,8 @@
 				D9B75BFB124C0F8D00497E76 /* uxshm.c in Sources */,
 				D9B75BFC124C0F8D00497E76 /* uxwrap.c in Sources */,
 				D9B75C1E124C106200497E76 /* darwin.c in Sources */,
+				4E3F2B55134BFE4B00AB7D2A /* os_Darwin.s in Sources */,
+				4E3F2B57134C047A00AB7D2A /* uxproces.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1053,10 +1061,12 @@
 				GCC_THUMB_SUPPORT = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				LINKER_DISPLAYS_MANGLED_NAMES = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-c";
 				PREBINDING = NO;
-				SDKROOT = iphoneos4.2;
+				SDKROOT = iphoneos;
 				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = dynamic;
 			};
 			name = Debug;
@@ -1075,10 +1085,12 @@
 				GCC_THUMB_SUPPORT = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				LINKER_DISPLAYS_MANGLED_NAMES = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-c";
 				PREBINDING = NO;
-				SDKROOT = iphoneos4.2;
+				SDKROOT = iphoneos;
 				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = dynamic;
 			};
 			name = Release;
